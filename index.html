@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+
+            <div class="logo"><a href="#">sanj<span>ith.</span></a></div>
+            <ul>
+                <li><a href = "#">Home</a></li>
+                <li><a href = "#">About Me</a></li>
+                <li><a href = "#">Internship</a></li>
+                <li><a href = "#">Portfolio</a></li>
+                <li><a href = "#">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Data Analyst</p>
+            <h1>Hii! I am <span>Sanjith</span><br>from Coimbatore.</h1>
+        </div>
+    </div>
+</div>  
+<!----------------------------------About Section--------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/my image.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me!</h1>
+                <p>Hii!Firstofall I am very happy to express myself to you.I am Sanjith from Coimbatore.I have did
+                    my schooling in K.G Matric Hr.Sec.School located in Annur.Now I am currently persuing graduate 
+                    of engineering in Bannari Amman Institute of Technology. And the institute gives a lot of exposure
+                    and skills to be learnt.And I have done a project called Brain Stroke Prediction which is implemented
+                    using Tech Stach called Machine Learning.It predicts whether the person have the probability of 
+                    affecting with stroke or not. My short term goal is Playing cricket and do websurfing and my long 
+                    term goal is to become a Data Analyst.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('projects')">Projects</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                    
+
+                </div>
+                <div class="tab-contents active-tab" id="projects">
+                    <p>Tech Stack Used:</p>
+                    <ul class="uo-list">
+                        <li class="my-list">
+                            Machine Learning
+                        </li>
+                        <li class="my-list">
+                            Python
+                        </li>
+                    </ul>
+                    <img src="images/brain stroke.jpg"class="my_img">
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>C</span><br>Basic-Intermediate Level</li>
+                        <li><span>C++</span><br>Basic-Intermediate Level</li>
+                        <li><span>Machine Learning</span><br>Basic Level</li>
+                        <li><span>HTML</span><br>Intermediate Level</li>
+                        <li><span>CSS</span><br>Intermediate Level</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span>GUVI AI-FOR-INDIA-2021</span><br>Participated in guvi's Guinness world Record Event and
+                            build a Face recognition Application using python</li>
+                        <li><span>CODE DECK COMPETITION</span><br>Runner in "Code Deck" Secured 2nd place in Ideathon
+                            organized by IEEE Student Branch on january 6 2021.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------internship-------------------------------->
+<div id="internship">
+    <div class="container">
+        <h1 class="sub-title">My Internship</h1>
+        <div class="internship-list">
+            <div>
+                <h2>Company Name:Internship Studio</h2><br>
+                <p>This Internship is based on Machine Learning. I have learnt
+                     about a lot of new things in Machine Learning like Importing
+                      the data, Preprocessing the data, Training and Testing the data by 
+                    implementing various algorithms, Visualizing the data, And finally 
+                    predicting the accuracy of the data. And atlast I have implememted 
+                    project on Youtube adview Prediction.      
+                </p><br>
+                <a href="https://drive.google.com/file/d/16TRnCcU_THRzQxsjXEihX2B8cl6VWlGI/view?usp=share_link"target="_blank">Certificate link</a>
+            </div>
+            <div>
+                <h2>Company Name:Suven Consultants & Technology Pvt. Ltd.</h2><br>
+                <p>This Internship is based on PHP-MYSQL. Here I have learnt about PHP-MYSQL
+                    database I have learned from basics to advanced. First I have learnt to 
+                    create a E-R diagram with the help of E-R  diagram I have learnt to store 
+                    the data in the MY-SQL database all the datas are stored in the format of
+                    tables. Finally I have learnt to retrive the data from the database.
+                </p><br>
+                <a href="https://drive.google.com/file/d/11auIk9Iz0mxt3ss0xFkewgxyBT65SZI2/view?usp=share_link"target="_blank">Certificate link</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
